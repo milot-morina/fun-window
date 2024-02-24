@@ -10,7 +10,7 @@ body, html {
 
 .container {
     position: absolute;
-    bottom: 80px; /* Adjust as needed */
+    bottom: 180px; /* Adjust as needed */
 }
 
 .center {
@@ -20,7 +20,7 @@ body, html {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: transparent;
+    background-color: black;
     color: white;
     border: 2px solid white;
     border-radius: 5px;
@@ -36,10 +36,270 @@ button:hover {
 /* Media query for smaller screens */
 @media screen and (max-width: 600px) {
     .container {
-        bottom: 10px;
+        bottom: 185px;
     }
 
     button {
         width: 80%; /* Set button width to 80% of the container for smaller screens */
     }
+}
+
+
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: fixed;
+    bottom: 80px; /* Adjust as needed */
+}
+  
+  ul li {
+    list-style:none;
+    margin:0 5px;
+  }
+  
+  ul li a .fa {
+    font-size: 20px; /* Smaller font size */
+    color: #262626;
+    line-height:40px; /* Smaller line height */
+    transition: .5s;
+    padding-right: 7px; /* Adjusted padding */
+  }
+  
+  ul li a span {
+    padding:0;
+    margin:0;
+    position:absolute;
+    top: 15px; /* Adjusted top position */
+    color: #262626;
+    letter-spacing: 2px; /* Smaller letter spacing */
+    transition: .5s;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    display:absolute;
+    display:block;
+    width:105px; /* Smaller width */
+    height:40px; /* Smaller height */
+    background: #fff;
+    text-align:left;
+    padding-left: 10px; /* Adjusted padding */
+    transform: rotate(-30deg) skew(25deg) translate(0,0);
+    transition:.5s;
+    box-shadow: -10px 10px 5px rgba(0,0,0,.5); /* Adjusted box shadow */
+  }
+  ul li a:before {
+    content: '';
+    position: absolute;
+    top:10px;
+    left:-20px;
+    height:100%;
+    width:20px;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+  }
+  ul li a:after {
+    content: '';
+    position: absolute;
+    bottom:-20px;
+    left:-10px;
+    height:20px;
+    width:100%;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+  }
+  
+  ul li a:hover {
+    transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+  }
+  
+  ul li:hover .fa {
+    color:#fff;
+  }
+  
+  ul li:hover span {
+    color:#fff;
+  }
+  
+  ul li:hover:nth-child(1) a{
+    background: #3b5998;
+  }
+  ul li:hover:nth-child(1) a:before{
+    background: #365492;
+  }
+  ul li:hover:nth-child(1) a:after{
+    background: #4a69ad;
+  }
+  
+  ul li:hover:nth-child(2) a{
+    background: #00aced;
+  }
+  ul li:hover:nth-child(2) a:before{
+    background: #097aa5;
+  }
+  ul li:hover:nth-child(2) a:after{
+    background: #53b9e0;
+  }
+  
+  ul li:hover:nth-child(3) a{
+    background: #dd4b39;
+  }
+  ul li:hover:nth-child(3) a:before{
+    background: #b33a2b;
+  }
+  ul li:hover:nth-child(3) a:after{
+    background: #e66a5a;
+  }
+  
+  ul li:hover:nth-child(4) a{
+    background: #e4405f;
+  }
+  ul li:hover:nth-child(4) a:before{
+    background: #d81c3f;
+  }
+  ul li:hover:nth-child(4) a:after{
+    background: #e46880;
+  }
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    ul {
+        bottom: 40px; /* Adjusted bottom position for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    ul li a {
+        width: 130px; /* Adjusted width for smaller screens */
+        height: 32px; /* Adjusted height for smaller screens */
+        padding: 5px 10px; /* Adjusted padding for smaller screens */
+        transform: none; /* Remove rotation and skew */
+        box-shadow: none; /* Remove box shadow */
+        transition: .5s; /* Preserve transition animation */
+    }
+
+    ul li a .fa {
+        font-size: 16px; /* Decreased font size for smaller screens */
+        line-height: 32px; /* Decreased line height for smaller screens */
+        padding-right: 2px; /* Adjusted padding for smaller screens */
+    }
+
+    ul li a span {
+        position: static; /* Remove absolute positioning */
+        top: auto; /* Remove top position */
+        letter-spacing: normal; /* Reset letter spacing */
+        transition: .5s; /* Preserve transition animation */
+    }
+}
+
+/* CSS */
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
 }
